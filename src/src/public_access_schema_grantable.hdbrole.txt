@@ -1,0 +1,13 @@
+{
+    "role": {
+        "name": "algoma.mm.im::PublicAccessSchema#",
+        "schema_privileges": [
+            {
+                "privileges_with_grant_option": [
+                    "SELECT",
+                    "EXECUTE"
+                ]
+            }
+        ]
+    }
+}
