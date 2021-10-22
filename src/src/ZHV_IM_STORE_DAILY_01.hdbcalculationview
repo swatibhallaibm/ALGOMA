@@ -1,0 +1,1531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="algoma.mm.im::ZHV_IM_STORE_DAILY_01" applyPrivilegeType="NONE" defaultClient="" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Aggregation" xscCompatibilityMode="true">
+  <origin/>
+  <descriptions defaultDescription="ZHV_IM_STORE_DAILY_01"/>
+  <metadata changedAt="2021-05-05 17:30:49.367"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="38"/>
+  <dataSources>
+    <DataSource id="ZHV_BV_MAT_MOV_01">
+      <resourceUri>algoma.mm.im::ZHV_BV_MAT_MOV_01</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projn_MAT_MOV" filterExpressionLanguage="COLUMN_ENGINE">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="fx_transaction_count"/>
+        <viewAttribute id="MBLNR"/>
+        <viewAttribute id="MJAHR"/>
+        <viewAttribute id="VGART"/>
+        <viewAttribute id="BLART"/>
+        <viewAttribute id="BLAUM"/>
+        <viewAttribute id="BLDAT"/>
+        <viewAttribute id="BUDAT"/>
+        <viewAttribute id="CPUDT"/>
+        <viewAttribute id="CPUTM"/>
+        <viewAttribute id="AEDAT"/>
+        <viewAttribute id="USNAM"/>
+        <viewAttribute id="TCODE"/>
+        <viewAttribute id="XBLNR"/>
+        <viewAttribute id="BKTXT"/>
+        <viewAttribute id="FRBNR"/>
+        <viewAttribute id="WEVER"/>
+        <viewAttribute id="XABLN"/>
+        <viewAttribute id="AWSYS"/>
+        <viewAttribute id="BLA2D"/>
+        <viewAttribute id="TCODE2"/>
+        <viewAttribute id="BFWMS"/>
+        <viewAttribute id="EXNUM"/>
+        <viewAttribute id="SPE_BUDAT_UHR"/>
+        <viewAttribute id="SPE_BUDAT_ZONE"/>
+        <viewAttribute id="LE_VBELN"/>
+        <viewAttribute id="SPE_LOGSYS"/>
+        <viewAttribute id="SPE_MDNUM_EWM"/>
+        <viewAttribute id="GTS_CUSREF_NO"/>
+        <viewAttribute id="FLS_RSTO"/>
+        <viewAttribute id="MSR_ACTIVE"/>
+        <viewAttribute id="KNUMV"/>
+        <viewAttribute id="XCOMPL"/>
+        <viewAttribute id="ZEILE"/>
+        <viewAttribute id="LINE_ID"/>
+        <viewAttribute id="PARENT_ID"/>
+        <viewAttribute id="LINE_DEPTH"/>
+        <viewAttribute id="MAA_URZEI"/>
+        <viewAttribute id="BWART"/>
+        <viewAttribute id="XAUTO"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="LGORT"/>
+        <viewAttribute id="CHARG"/>
+        <viewAttribute id="INSMK"/>
+        <viewAttribute id="ZUSCH"/>
+        <viewAttribute id="ZUSTD"/>
+        <viewAttribute id="SOBKZ"/>
+        <viewAttribute id="LIFNR"/>
+        <viewAttribute id="KUNNR"/>
+        <viewAttribute id="KDAUF"/>
+        <viewAttribute id="KDPOS"/>
+        <viewAttribute id="KDEIN"/>
+        <viewAttribute id="PLPLA"/>
+        <viewAttribute id="SHKZG"/>
+        <viewAttribute id="WAERS"/>
+        <viewAttribute id="SHKUM"/>
+        <viewAttribute id="BWTAR"/>
+        <viewAttribute id="MEINS"/>
+        <viewAttribute id="ERFME"/>
+        <viewAttribute id="BPRME"/>
+        <viewAttribute id="EBELN"/>
+        <viewAttribute id="EBELP"/>
+        <viewAttribute id="LFBJA"/>
+        <viewAttribute id="LFBNR"/>
+        <viewAttribute id="LFPOS"/>
+        <viewAttribute id="SJAHR"/>
+        <viewAttribute id="SMBLN"/>
+        <viewAttribute id="SMBLP"/>
+        <viewAttribute id="ELIKZ"/>
+        <viewAttribute id="SGTXT"/>
+        <viewAttribute id="EQUNR"/>
+        <viewAttribute id="WEMPF"/>
+        <viewAttribute id="ABLAD"/>
+        <viewAttribute id="GSBER"/>
+        <viewAttribute id="KOKRS"/>
+        <viewAttribute id="PARGB"/>
+        <viewAttribute id="PARBU"/>
+        <viewAttribute id="KOSTL"/>
+        <viewAttribute id="PROJN"/>
+        <viewAttribute id="AUFNR"/>
+        <viewAttribute id="ANLN1"/>
+        <viewAttribute id="ANLN2"/>
+        <viewAttribute id="XSKST"/>
+        <viewAttribute id="XSAUF"/>
+        <viewAttribute id="XSPRO"/>
+        <viewAttribute id="XSERG"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="XRUEM"/>
+        <viewAttribute id="XRUEJ"/>
+        <viewAttribute id="BUKRS"/>
+        <viewAttribute id="BELNR"/>
+        <viewAttribute id="BUZEI"/>
+        <viewAttribute id="BELUM"/>
+        <viewAttribute id="BUZUM"/>
+        <viewAttribute id="RSNUM"/>
+        <viewAttribute id="RSPOS"/>
+        <viewAttribute id="KZEAR"/>
+        <viewAttribute id="KZSTR"/>
+        <viewAttribute id="UMMAT"/>
+        <viewAttribute id="UMWRK"/>
+        <viewAttribute id="UMLGO"/>
+        <viewAttribute id="UMCHA"/>
+        <viewAttribute id="UMZST"/>
+        <viewAttribute id="UMZUS"/>
+        <viewAttribute id="UMBAR"/>
+        <viewAttribute id="UMSOK"/>
+        <viewAttribute id="KZBEW"/>
+        <viewAttribute id="KZVBR"/>
+        <viewAttribute id="KZZUG"/>
+        <viewAttribute id="WEUNB"/>
+        <viewAttribute id="LGNUM"/>
+        <viewAttribute id="LGTYP"/>
+        <viewAttribute id="LGPLA"/>
+        <viewAttribute id="BESTQ"/>
+        <viewAttribute id="BWLVS"/>
+        <viewAttribute id="TBNUM"/>
+        <viewAttribute id="TBPOS"/>
+        <viewAttribute id="XBLVS"/>
+        <viewAttribute id="VSCHN"/>
+        <viewAttribute id="NSCHN"/>
+        <viewAttribute id="DYPLA"/>
+        <viewAttribute id="UBNUM"/>
+        <viewAttribute id="TBPRI"/>
+        <viewAttribute id="TANUM"/>
+        <viewAttribute id="WEANZ"/>
+        <viewAttribute id="GRUND"/>
+        <viewAttribute id="EVERS"/>
+        <viewAttribute id="EVERE"/>
+        <viewAttribute id="IMKEY"/>
+        <viewAttribute id="KSTRG"/>
+        <viewAttribute id="PAOBJNR"/>
+        <viewAttribute id="PRCTR"/>
+        <viewAttribute id="PS_PSP_PNR"/>
+        <viewAttribute id="NPLNR"/>
+        <viewAttribute id="AUFPL"/>
+        <viewAttribute id="APLZL"/>
+        <viewAttribute id="AUFPS"/>
+        <viewAttribute id="VPTNR"/>
+        <viewAttribute id="FIPOS"/>
+        <viewAttribute id="SAKTO"/>
+        <viewAttribute id="BSTME"/>
+        <viewAttribute id="XWSBR"/>
+        <viewAttribute id="EMLIF"/>
+        <viewAttribute id="AKTNR"/>
+        <viewAttribute id="ZEKKN"/>
+        <viewAttribute id="VFDAT"/>
+        <viewAttribute id="CUOBJ_CH"/>
+        <viewAttribute id="PPRCTR"/>
+        <viewAttribute id="RSART"/>
+        <viewAttribute id="GEBER"/>
+        <viewAttribute id="FISTL"/>
+        <viewAttribute id="MATBF"/>
+        <viewAttribute id="UMMAB"/>
+        <viewAttribute id="BUSTM"/>
+        <viewAttribute id="BUSTW"/>
+        <viewAttribute id="MENGU"/>
+        <viewAttribute id="WERTU"/>
+        <viewAttribute id="VPRSV"/>
+        <viewAttribute id="FKBER"/>
+        <viewAttribute id="DABRBZ"/>
+        <viewAttribute id="DABRZ"/>
+        <viewAttribute id="XBEAU"/>
+        <viewAttribute id="LSMEH"/>
+        <viewAttribute id="KZBWS"/>
+        <viewAttribute id="QINSPST"/>
+        <viewAttribute id="URZEI"/>
+        <viewAttribute id="MWSKZ"/>
+        <viewAttribute id="TXJCD"/>
+        <viewAttribute id="EMATN"/>
+        <viewAttribute id="J_1AGIRUPD"/>
+        <viewAttribute id="VKMWS"/>
+        <viewAttribute id="HSDAT"/>
+        <viewAttribute id="BERKZ"/>
+        <viewAttribute id="MAT_KDAUF"/>
+        <viewAttribute id="MAT_KDPOS"/>
+        <viewAttribute id="MAT_PSPNR"/>
+        <viewAttribute id="XWOFF"/>
+        <viewAttribute id="BEMOT"/>
+        <viewAttribute id="PRZNR"/>
+        <viewAttribute id="LLIEF"/>
+        <viewAttribute id="LSTAR"/>
+        <viewAttribute id="XOBEW"/>
+        <viewAttribute id="GRANT_NBR"/>
+        <viewAttribute id="ZUSTD_T156M"/>
+        <viewAttribute id="SPE_GTS_STOCK_TY"/>
+        <viewAttribute id="KBLNR"/>
+        <viewAttribute id="KBLPOS"/>
+        <viewAttribute id="XMACC"/>
+        <viewAttribute id="VGART_MKPF"/>
+        <viewAttribute id="BUDAT_MKPF"/>
+        <viewAttribute id="CPUDT_MKPF"/>
+        <viewAttribute id="CPUTM_MKPF"/>
+        <viewAttribute id="USNAM_MKPF"/>
+        <viewAttribute id="XBLNR_MKPF"/>
+        <viewAttribute id="TCODE2_MKPF"/>
+        <viewAttribute id="VBELN_IM"/>
+        <viewAttribute id="VBELP_IM"/>
+        <viewAttribute id="SGT_SCAT"/>
+        <viewAttribute id="SGT_UMSCAT"/>
+        <viewAttribute id="SGT_RCAT"/>
+        <viewAttribute id="_BEV2_ED_KZ_VER"/>
+        <viewAttribute id="_BEV2_ED_USER"/>
+        <viewAttribute id="_BEV2_ED_AEDAT"/>
+        <viewAttribute id="_BEV2_ED_AETIM"/>
+        <viewAttribute id="DISUB_OWNER"/>
+        <viewAttribute id="FSH_SEASON_YEAR"/>
+        <viewAttribute id="FSH_SEASON"/>
+        <viewAttribute id="FSH_COLLECTION"/>
+        <viewAttribute id="FSH_THEME"/>
+        <viewAttribute id="FSH_UMSEA_YR"/>
+        <viewAttribute id="FSH_UMSEA"/>
+        <viewAttribute id="FSH_UMCOLL"/>
+        <viewAttribute id="FSH_UMTHEME"/>
+        <viewAttribute id="SGT_CHINT"/>
+        <viewAttribute id="COMPL_MARK"/>
+        <viewAttribute id="FZGLS_MARK"/>
+        <viewAttribute id="ETANP_MARK"/>
+        <viewAttribute id="POPUP_MARK"/>
+        <viewAttribute id="OICONDCOD"/>
+        <viewAttribute id="CONDI"/>
+        <viewAttribute id="WRF_CHARSTC1"/>
+        <viewAttribute id="WRF_CHARSTC2"/>
+        <viewAttribute id="WRF_CHARSTC3"/>
+        <viewAttribute id="FRATH"/>
+        <viewAttribute id="DMBTR"/>
+        <viewAttribute id="BNBTR"/>
+        <viewAttribute id="BUALT"/>
+        <viewAttribute id="DMBUM"/>
+        <viewAttribute id="MENGE"/>
+        <viewAttribute id="ERFMG"/>
+        <viewAttribute id="BPMNG"/>
+        <viewAttribute id="PBAMG"/>
+        <viewAttribute id="PALAN"/>
+        <viewAttribute id="BSTMG"/>
+        <viewAttribute id="EXBWR"/>
+        <viewAttribute id="VKWRT"/>
+        <viewAttribute id="EXVKW"/>
+        <viewAttribute id="LBKUM"/>
+        <viewAttribute id="SALK3"/>
+        <viewAttribute id="VKWRA"/>
+        <viewAttribute id="LSMNG"/>
+        <viewAttribute id="J_1BEXBASE"/>
+        <viewAttribute id="FSH_DEALLOC_QTY"/>
+        <viewAttribute id="OINAVNW"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="#ZHV_BV_MAT_MOV_01">
+        <mapping xsi:type="Calculation:AttributeMapping" target="fx_transaction_count" source="fx_transaction_count"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MBLNR" source="MBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MJAHR" source="MJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VGART" source="VGART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLART" source="BLART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLAUM" source="BLAUM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLDAT" source="BLDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CPUDT" source="CPUDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CPUTM" source="CPUTM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AEDAT" source="AEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USNAM" source="USNAM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TCODE" source="TCODE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XBLNR" source="XBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BKTXT" source="BKTXT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FRBNR" source="FRBNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WEVER" source="WEVER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XABLN" source="XABLN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AWSYS" source="AWSYS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLA2D" source="BLA2D"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TCODE2" source="TCODE2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BFWMS" source="BFWMS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EXNUM" source="EXNUM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SPE_BUDAT_UHR" source="SPE_BUDAT_UHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SPE_BUDAT_ZONE" source="SPE_BUDAT_ZONE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LE_VBELN" source="LE_VBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SPE_LOGSYS" source="SPE_LOGSYS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SPE_MDNUM_EWM" source="SPE_MDNUM_EWM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GTS_CUSREF_NO" source="GTS_CUSREF_NO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FLS_RSTO" source="FLS_RSTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MSR_ACTIVE" source="MSR_ACTIVE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KNUMV" source="KNUMV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XCOMPL" source="XCOMPL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZEILE" source="ZEILE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LINE_ID" source="LINE_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARENT_ID" source="PARENT_ID"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LINE_DEPTH" source="LINE_DEPTH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MAA_URZEI" source="MAA_URZEI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BWART" source="BWART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XAUTO" source="XAUTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LGORT" source="LGORT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CHARG" source="CHARG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INSMK" source="INSMK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZUSCH" source="ZUSCH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZUSTD" source="ZUSTD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOBKZ" source="SOBKZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LIFNR" source="LIFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KUNNR" source="KUNNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDAUF" source="KDAUF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDPOS" source="KDPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KDEIN" source="KDEIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PLPLA" source="PLPLA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SHKZG" source="SHKZG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WAERS" source="WAERS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SHKUM" source="SHKUM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BWTAR" source="BWTAR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS" source="MEINS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERFME" source="ERFME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BPRME" source="BPRME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELN" source="EBELN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EBELP" source="EBELP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LFBJA" source="LFBJA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LFBNR" source="LFBNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LFPOS" source="LFPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SJAHR" source="SJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SMBLN" source="SMBLN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SMBLP" source="SMBLP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ELIKZ" source="ELIKZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SGTXT" source="SGTXT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EQUNR" source="EQUNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WEMPF" source="WEMPF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ABLAD" source="ABLAD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GSBER" source="GSBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KOKRS" source="KOKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARGB" source="PARGB"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PARBU" source="PARBU"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KOSTL" source="KOSTL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PROJN" source="PROJN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUFNR" source="AUFNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ANLN1" source="ANLN1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ANLN2" source="ANLN2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XSKST" source="XSKST"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XSAUF" source="XSAUF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XSPRO" source="XSPRO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XSERG" source="XSERG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XRUEM" source="XRUEM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XRUEJ" source="XRUEJ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUKRS" source="BUKRS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELNR" source="BELNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUZEI" source="BUZEI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BELUM" source="BELUM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUZUM" source="BUZUM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RSNUM" source="RSNUM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RSPOS" source="RSPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KZEAR" source="KZEAR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KZSTR" source="KZSTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UMMAT" source="UMMAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UMWRK" source="UMWRK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UMLGO" source="UMLGO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UMCHA" source="UMCHA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UMZST" source="UMZST"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UMZUS" source="UMZUS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UMBAR" source="UMBAR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UMSOK" source="UMSOK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KZBEW" source="KZBEW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KZVBR" source="KZVBR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KZZUG" source="KZZUG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WEUNB" source="WEUNB"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LGNUM" source="LGNUM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LGTYP" source="LGTYP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LGPLA" source="LGPLA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BESTQ" source="BESTQ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BWLVS" source="BWLVS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TBNUM" source="TBNUM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TBPOS" source="TBPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XBLVS" source="XBLVS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VSCHN" source="VSCHN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NSCHN" source="NSCHN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DYPLA" source="DYPLA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UBNUM" source="UBNUM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TBPRI" source="TBPRI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TANUM" source="TANUM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WEANZ" source="WEANZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GRUND" source="GRUND"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EVERS" source="EVERS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EVERE" source="EVERE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="IMKEY" source="IMKEY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KSTRG" source="KSTRG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PAOBJNR" source="PAOBJNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRCTR" source="PRCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PS_PSP_PNR" source="PS_PSP_PNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="NPLNR" source="NPLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUFPL" source="AUFPL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="APLZL" source="APLZL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AUFPS" source="AUFPS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VPTNR" source="VPTNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FIPOS" source="FIPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SAKTO" source="SAKTO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSTME" source="BSTME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XWSBR" source="XWSBR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EMLIF" source="EMLIF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AKTNR" source="AKTNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZEKKN" source="ZEKKN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VFDAT" source="VFDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CUOBJ_CH" source="CUOBJ_CH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PPRCTR" source="PPRCTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="RSART" source="RSART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GEBER" source="GEBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FISTL" source="FISTL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATBF" source="MATBF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="UMMAB" source="UMMAB"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUSTM" source="BUSTM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUSTW" source="BUSTW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MENGU" source="MENGU"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERTU" source="WERTU"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VPRSV" source="VPRSV"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FKBER" source="FKBER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DABRBZ" source="DABRBZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DABRZ" source="DABRZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XBEAU" source="XBEAU"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LSMEH" source="LSMEH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KZBWS" source="KZBWS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="QINSPST" source="QINSPST"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="URZEI" source="URZEI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MWSKZ" source="MWSKZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TXJCD" source="TXJCD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EMATN" source="EMATN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="J_1AGIRUPD" source="J_1AGIRUPD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKMWS" source="VKMWS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="HSDAT" source="HSDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BERKZ" source="BERKZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MAT_KDAUF" source="MAT_KDAUF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MAT_KDPOS" source="MAT_KDPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MAT_PSPNR" source="MAT_PSPNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XWOFF" source="XWOFF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BEMOT" source="BEMOT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PRZNR" source="PRZNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LLIEF" source="LLIEF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LSTAR" source="LSTAR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XOBEW" source="XOBEW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GRANT_NBR" source="GRANT_NBR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZUSTD_T156M" source="ZUSTD_T156M"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SPE_GTS_STOCK_TY" source="SPE_GTS_STOCK_TY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KBLNR" source="KBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KBLPOS" source="KBLPOS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XMACC" source="XMACC"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VGART_MKPF" source="VGART_MKPF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT_MKPF" source="BUDAT_MKPF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CPUDT_MKPF" source="CPUDT_MKPF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CPUTM_MKPF" source="CPUTM_MKPF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USNAM_MKPF" source="USNAM_MKPF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XBLNR_MKPF" source="XBLNR_MKPF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="TCODE2_MKPF" source="TCODE2_MKPF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELN_IM" source="VBELN_IM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VBELP_IM" source="VBELP_IM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SGT_SCAT" source="SGT_SCAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SGT_UMSCAT" source="SGT_UMSCAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SGT_RCAT" source="SGT_RCAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="_BEV2_ED_KZ_VER" source="_BEV2_ED_KZ_VER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="_BEV2_ED_USER" source="_BEV2_ED_USER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="_BEV2_ED_AEDAT" source="_BEV2_ED_AEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="_BEV2_ED_AETIM" source="_BEV2_ED_AETIM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISUB_OWNER" source="DISUB_OWNER"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_SEASON_YEAR" source="FSH_SEASON_YEAR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_SEASON" source="FSH_SEASON"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_COLLECTION" source="FSH_COLLECTION"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_THEME" source="FSH_THEME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_UMSEA_YR" source="FSH_UMSEA_YR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_UMSEA" source="FSH_UMSEA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_UMCOLL" source="FSH_UMCOLL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_UMTHEME" source="FSH_UMTHEME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SGT_CHINT" source="SGT_CHINT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="COMPL_MARK" source="COMPL_MARK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FZGLS_MARK" source="FZGLS_MARK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ETANP_MARK" source="ETANP_MARK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="POPUP_MARK" source="POPUP_MARK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OICONDCOD" source="OICONDCOD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="CONDI" source="CONDI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WRF_CHARSTC1" source="WRF_CHARSTC1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WRF_CHARSTC2" source="WRF_CHARSTC2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WRF_CHARSTC3" source="WRF_CHARSTC3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FRATH" source="FRATH"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DMBTR" source="DMBTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BNBTR" source="BNBTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUALT" source="BUALT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DMBUM" source="DMBUM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MENGE" source="MENGE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERFMG" source="ERFMG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BPMNG" source="BPMNG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PBAMG" source="PBAMG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="PALAN" source="PALAN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BSTMG" source="BSTMG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EXBWR" source="EXBWR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKWRT" source="VKWRT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EXVKW" source="EXVKW"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LBKUM" source="LBKUM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALK3" source="SALK3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VKWRA" source="VKWRA"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LSMNG" source="LSMNG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="J_1BEXBASE" source="J_1BEXBASE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="FSH_DEALLOC_QTY" source="FSH_DEALLOC_QTY"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="OINAVNW" source="OINAVNW"/>
+      </input>
+      <filter>in(&quot;LGORT&quot;,'','W011','W028','W101','W102','W103','WQBI') AND&#xD;
+in(&quot;BWART&quot;,'101','102','201','202','261','262','301','311','541','542','543','544')</filter>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Projn_MAT_MOV">
+    <descriptions/>
+    <attributes>
+      <attribute id="MBLNR" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MBLNR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="MBLNR"/>
+      </attribute>
+      <attribute id="MJAHR" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MJAHR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="MJAHR"/>
+      </attribute>
+      <attribute id="VGART" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VGART"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="VGART"/>
+      </attribute>
+      <attribute id="BLART" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BLART"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="BLART"/>
+      </attribute>
+      <attribute id="BLAUM" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BLAUM"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="BLAUM"/>
+      </attribute>
+      <attribute id="BLDAT" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BLDAT"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="BLDAT"/>
+      </attribute>
+      <attribute id="BUDAT" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUDAT"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="BUDAT"/>
+      </attribute>
+      <attribute id="CPUDT" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CPUDT"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="CPUDT"/>
+      </attribute>
+      <attribute id="CPUTM" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CPUTM"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="CPUTM"/>
+      </attribute>
+      <attribute id="AEDAT" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AEDAT"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="AEDAT"/>
+      </attribute>
+      <attribute id="USNAM" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="USNAM"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="USNAM"/>
+      </attribute>
+      <attribute id="TCODE" order="13" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TCODE"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="TCODE"/>
+      </attribute>
+      <attribute id="XBLNR" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XBLNR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="XBLNR"/>
+      </attribute>
+      <attribute id="BKTXT" order="15" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BKTXT"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="BKTXT"/>
+      </attribute>
+      <attribute id="FRBNR" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FRBNR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="FRBNR"/>
+      </attribute>
+      <attribute id="WEVER" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WEVER"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="WEVER"/>
+      </attribute>
+      <attribute id="XABLN" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XABLN"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="XABLN"/>
+      </attribute>
+      <attribute id="AWSYS" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AWSYS"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="AWSYS"/>
+      </attribute>
+      <attribute id="BLA2D" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BLA2D"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="BLA2D"/>
+      </attribute>
+      <attribute id="TCODE2" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TCODE2"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="TCODE2"/>
+      </attribute>
+      <attribute id="BFWMS" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BFWMS"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="BFWMS"/>
+      </attribute>
+      <attribute id="EXNUM" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EXNUM"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="EXNUM"/>
+      </attribute>
+      <attribute id="SPE_BUDAT_UHR" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPE_BUDAT_UHR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="SPE_BUDAT_UHR"/>
+      </attribute>
+      <attribute id="SPE_BUDAT_ZONE" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPE_BUDAT_ZONE"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="SPE_BUDAT_ZONE"/>
+      </attribute>
+      <attribute id="LE_VBELN" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LE_VBELN"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="LE_VBELN"/>
+      </attribute>
+      <attribute id="SPE_LOGSYS" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPE_LOGSYS"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="SPE_LOGSYS"/>
+      </attribute>
+      <attribute id="SPE_MDNUM_EWM" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPE_MDNUM_EWM"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="SPE_MDNUM_EWM"/>
+      </attribute>
+      <attribute id="GTS_CUSREF_NO" order="29" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GTS_CUSREF_NO"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="GTS_CUSREF_NO"/>
+      </attribute>
+      <attribute id="FLS_RSTO" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FLS_RSTO"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="FLS_RSTO"/>
+      </attribute>
+      <attribute id="MSR_ACTIVE" order="31" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MSR_ACTIVE"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="MSR_ACTIVE"/>
+      </attribute>
+      <attribute id="KNUMV" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KNUMV"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="KNUMV"/>
+      </attribute>
+      <attribute id="XCOMPL" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XCOMPL"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="XCOMPL"/>
+      </attribute>
+      <attribute id="ZEILE" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZEILE"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="ZEILE"/>
+      </attribute>
+      <attribute id="LINE_ID" order="35" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LINE_ID"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="LINE_ID"/>
+      </attribute>
+      <attribute id="PARENT_ID" order="36" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARENT_ID"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="PARENT_ID"/>
+      </attribute>
+      <attribute id="LINE_DEPTH" order="37" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LINE_DEPTH"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="LINE_DEPTH"/>
+      </attribute>
+      <attribute id="MAA_URZEI" order="38" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAA_URZEI"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="MAA_URZEI"/>
+      </attribute>
+      <attribute id="BWART" order="39" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWART"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="BWART"/>
+      </attribute>
+      <attribute id="XAUTO" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XAUTO"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="XAUTO"/>
+      </attribute>
+      <attribute id="MATNR" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATNR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="MATNR"/>
+      </attribute>
+      <attribute id="WERKS" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERKS"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="WERKS"/>
+      </attribute>
+      <attribute id="LGORT" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LGORT"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="LGORT"/>
+      </attribute>
+      <attribute id="CHARG" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CHARG"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="CHARG"/>
+      </attribute>
+      <attribute id="INSMK" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="INSMK"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="INSMK"/>
+      </attribute>
+      <attribute id="ZUSCH" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZUSCH"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="ZUSCH"/>
+      </attribute>
+      <attribute id="ZUSTD" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZUSTD"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="ZUSTD"/>
+      </attribute>
+      <attribute id="SOBKZ" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SOBKZ"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="SOBKZ"/>
+      </attribute>
+      <attribute id="LIFNR" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LIFNR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="LIFNR"/>
+      </attribute>
+      <attribute id="KUNNR" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KUNNR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="KUNNR"/>
+      </attribute>
+      <attribute id="KDAUF" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KDAUF"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="KDAUF"/>
+      </attribute>
+      <attribute id="KDPOS" order="52" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KDPOS"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="KDPOS"/>
+      </attribute>
+      <attribute id="KDEIN" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KDEIN"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="KDEIN"/>
+      </attribute>
+      <attribute id="PLPLA" order="54" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PLPLA"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="PLPLA"/>
+      </attribute>
+      <attribute id="SHKZG" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SHKZG"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="SHKZG"/>
+      </attribute>
+      <attribute id="WAERS" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WAERS"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="WAERS"/>
+      </attribute>
+      <attribute id="SHKUM" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SHKUM"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="SHKUM"/>
+      </attribute>
+      <attribute id="BWTAR" order="58" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWTAR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="BWTAR"/>
+      </attribute>
+      <attribute id="MEINS" order="59" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MEINS"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="MEINS"/>
+      </attribute>
+      <attribute id="ERFME" order="60" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ERFME"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="ERFME"/>
+      </attribute>
+      <attribute id="BPRME" order="61" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BPRME"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="BPRME"/>
+      </attribute>
+      <attribute id="EBELN" order="62" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EBELN"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="EBELN"/>
+      </attribute>
+      <attribute id="EBELP" order="63" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EBELP"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="EBELP"/>
+      </attribute>
+      <attribute id="LFBJA" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LFBJA"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="LFBJA"/>
+      </attribute>
+      <attribute id="LFBNR" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LFBNR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="LFBNR"/>
+      </attribute>
+      <attribute id="LFPOS" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LFPOS"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="LFPOS"/>
+      </attribute>
+      <attribute id="SJAHR" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SJAHR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="SJAHR"/>
+      </attribute>
+      <attribute id="SMBLN" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SMBLN"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="SMBLN"/>
+      </attribute>
+      <attribute id="SMBLP" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SMBLP"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="SMBLP"/>
+      </attribute>
+      <attribute id="ELIKZ" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ELIKZ"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="ELIKZ"/>
+      </attribute>
+      <attribute id="SGTXT" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGTXT"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="SGTXT"/>
+      </attribute>
+      <attribute id="EQUNR" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EQUNR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="EQUNR"/>
+      </attribute>
+      <attribute id="WEMPF" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WEMPF"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="WEMPF"/>
+      </attribute>
+      <attribute id="ABLAD" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ABLAD"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="ABLAD"/>
+      </attribute>
+      <attribute id="GSBER" order="75" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GSBER"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="GSBER"/>
+      </attribute>
+      <attribute id="KOKRS" order="76" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOKRS"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="KOKRS"/>
+      </attribute>
+      <attribute id="PARGB" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARGB"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="PARGB"/>
+      </attribute>
+      <attribute id="PARBU" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PARBU"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="PARBU"/>
+      </attribute>
+      <attribute id="KOSTL" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KOSTL"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="KOSTL"/>
+      </attribute>
+      <attribute id="PROJN" order="80" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PROJN"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="PROJN"/>
+      </attribute>
+      <attribute id="AUFNR" order="81" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUFNR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="AUFNR"/>
+      </attribute>
+      <attribute id="ANLN1" order="82" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANLN1"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="ANLN1"/>
+      </attribute>
+      <attribute id="ANLN2" order="83" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ANLN2"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="ANLN2"/>
+      </attribute>
+      <attribute id="XSKST" order="84" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XSKST"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="XSKST"/>
+      </attribute>
+      <attribute id="XSAUF" order="85" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XSAUF"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="XSAUF"/>
+      </attribute>
+      <attribute id="XSPRO" order="86" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XSPRO"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="XSPRO"/>
+      </attribute>
+      <attribute id="XSERG" order="87" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XSERG"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="XSERG"/>
+      </attribute>
+      <attribute id="GJAHR" order="88" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GJAHR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="GJAHR"/>
+      </attribute>
+      <attribute id="XRUEM" order="89" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XRUEM"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="XRUEM"/>
+      </attribute>
+      <attribute id="XRUEJ" order="90" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XRUEJ"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="XRUEJ"/>
+      </attribute>
+      <attribute id="BUKRS" order="91" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUKRS"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="BUKRS"/>
+      </attribute>
+      <attribute id="BELNR" order="92" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BELNR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="BELNR"/>
+      </attribute>
+      <attribute id="BUZEI" order="93" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUZEI"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="BUZEI"/>
+      </attribute>
+      <attribute id="BELUM" order="94" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BELUM"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="BELUM"/>
+      </attribute>
+      <attribute id="BUZUM" order="95" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUZUM"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="BUZUM"/>
+      </attribute>
+      <attribute id="RSNUM" order="96" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RSNUM"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="RSNUM"/>
+      </attribute>
+      <attribute id="RSPOS" order="97" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RSPOS"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="RSPOS"/>
+      </attribute>
+      <attribute id="KZEAR" order="98" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZEAR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="KZEAR"/>
+      </attribute>
+      <attribute id="KZSTR" order="99" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZSTR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="KZSTR"/>
+      </attribute>
+      <attribute id="UMMAT" order="100" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMMAT"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="UMMAT"/>
+      </attribute>
+      <attribute id="UMWRK" order="101" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMWRK"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="UMWRK"/>
+      </attribute>
+      <attribute id="UMLGO" order="102" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMLGO"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="UMLGO"/>
+      </attribute>
+      <attribute id="UMCHA" order="103" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMCHA"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="UMCHA"/>
+      </attribute>
+      <attribute id="UMZST" order="104" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMZST"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="UMZST"/>
+      </attribute>
+      <attribute id="UMZUS" order="105" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMZUS"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="UMZUS"/>
+      </attribute>
+      <attribute id="UMBAR" order="106" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMBAR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="UMBAR"/>
+      </attribute>
+      <attribute id="UMSOK" order="107" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMSOK"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="UMSOK"/>
+      </attribute>
+      <attribute id="KZBEW" order="108" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZBEW"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="KZBEW"/>
+      </attribute>
+      <attribute id="KZVBR" order="109" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZVBR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="KZVBR"/>
+      </attribute>
+      <attribute id="KZZUG" order="110" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZZUG"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="KZZUG"/>
+      </attribute>
+      <attribute id="WEUNB" order="111" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WEUNB"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="WEUNB"/>
+      </attribute>
+      <attribute id="LGNUM" order="112" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LGNUM"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="LGNUM"/>
+      </attribute>
+      <attribute id="LGTYP" order="113" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LGTYP"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="LGTYP"/>
+      </attribute>
+      <attribute id="LGPLA" order="114" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LGPLA"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="LGPLA"/>
+      </attribute>
+      <attribute id="BESTQ" order="115" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BESTQ"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="BESTQ"/>
+      </attribute>
+      <attribute id="BWLVS" order="116" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BWLVS"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="BWLVS"/>
+      </attribute>
+      <attribute id="TBNUM" order="117" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TBNUM"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="TBNUM"/>
+      </attribute>
+      <attribute id="TBPOS" order="118" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TBPOS"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="TBPOS"/>
+      </attribute>
+      <attribute id="XBLVS" order="119" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XBLVS"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="XBLVS"/>
+      </attribute>
+      <attribute id="VSCHN" order="120" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VSCHN"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="VSCHN"/>
+      </attribute>
+      <attribute id="NSCHN" order="121" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NSCHN"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="NSCHN"/>
+      </attribute>
+      <attribute id="DYPLA" order="122" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DYPLA"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="DYPLA"/>
+      </attribute>
+      <attribute id="UBNUM" order="123" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UBNUM"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="UBNUM"/>
+      </attribute>
+      <attribute id="TBPRI" order="124" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TBPRI"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="TBPRI"/>
+      </attribute>
+      <attribute id="TANUM" order="125" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TANUM"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="TANUM"/>
+      </attribute>
+      <attribute id="WEANZ" order="126" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WEANZ"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="WEANZ"/>
+      </attribute>
+      <attribute id="GRUND" order="127" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GRUND"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="GRUND"/>
+      </attribute>
+      <attribute id="EVERS" order="128" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EVERS"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="EVERS"/>
+      </attribute>
+      <attribute id="EVERE" order="129" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EVERE"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="EVERE"/>
+      </attribute>
+      <attribute id="IMKEY" order="130" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="IMKEY"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="IMKEY"/>
+      </attribute>
+      <attribute id="KSTRG" order="131" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KSTRG"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="KSTRG"/>
+      </attribute>
+      <attribute id="PAOBJNR" order="132" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PAOBJNR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="PAOBJNR"/>
+      </attribute>
+      <attribute id="PRCTR" order="133" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRCTR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="PRCTR"/>
+      </attribute>
+      <attribute id="PS_PSP_PNR" order="134" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PS_PSP_PNR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="PS_PSP_PNR"/>
+      </attribute>
+      <attribute id="NPLNR" order="135" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="NPLNR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="NPLNR"/>
+      </attribute>
+      <attribute id="AUFPL" order="136" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUFPL"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="AUFPL"/>
+      </attribute>
+      <attribute id="APLZL" order="137" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="APLZL"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="APLZL"/>
+      </attribute>
+      <attribute id="AUFPS" order="138" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AUFPS"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="AUFPS"/>
+      </attribute>
+      <attribute id="VPTNR" order="139" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VPTNR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="VPTNR"/>
+      </attribute>
+      <attribute id="FIPOS" order="140" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FIPOS"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="FIPOS"/>
+      </attribute>
+      <attribute id="SAKTO" order="141" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SAKTO"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="SAKTO"/>
+      </attribute>
+      <attribute id="BSTME" order="142" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BSTME"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="BSTME"/>
+      </attribute>
+      <attribute id="XWSBR" order="143" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XWSBR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="XWSBR"/>
+      </attribute>
+      <attribute id="EMLIF" order="144" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EMLIF"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="EMLIF"/>
+      </attribute>
+      <attribute id="AKTNR" order="145" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="AKTNR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="AKTNR"/>
+      </attribute>
+      <attribute id="ZEKKN" order="146" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZEKKN"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="ZEKKN"/>
+      </attribute>
+      <attribute id="VFDAT" order="147" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VFDAT"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="VFDAT"/>
+      </attribute>
+      <attribute id="CUOBJ_CH" order="148" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CUOBJ_CH"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="CUOBJ_CH"/>
+      </attribute>
+      <attribute id="PPRCTR" order="149" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PPRCTR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="PPRCTR"/>
+      </attribute>
+      <attribute id="RSART" order="150" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="RSART"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="RSART"/>
+      </attribute>
+      <attribute id="GEBER" order="151" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GEBER"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="GEBER"/>
+      </attribute>
+      <attribute id="FISTL" order="152" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FISTL"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="FISTL"/>
+      </attribute>
+      <attribute id="MATBF" order="153" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MATBF"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="MATBF"/>
+      </attribute>
+      <attribute id="UMMAB" order="154" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="UMMAB"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="UMMAB"/>
+      </attribute>
+      <attribute id="BUSTM" order="155" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUSTM"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="BUSTM"/>
+      </attribute>
+      <attribute id="BUSTW" order="156" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUSTW"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="BUSTW"/>
+      </attribute>
+      <attribute id="MENGU" order="157" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MENGU"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="MENGU"/>
+      </attribute>
+      <attribute id="WERTU" order="158" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WERTU"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="WERTU"/>
+      </attribute>
+      <attribute id="VPRSV" order="159" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VPRSV"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="VPRSV"/>
+      </attribute>
+      <attribute id="FKBER" order="160" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FKBER"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="FKBER"/>
+      </attribute>
+      <attribute id="DABRBZ" order="161" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DABRBZ"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="DABRBZ"/>
+      </attribute>
+      <attribute id="DABRZ" order="162" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DABRZ"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="DABRZ"/>
+      </attribute>
+      <attribute id="XBEAU" order="163" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XBEAU"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="XBEAU"/>
+      </attribute>
+      <attribute id="LSMEH" order="164" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LSMEH"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="LSMEH"/>
+      </attribute>
+      <attribute id="KZBWS" order="165" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KZBWS"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="KZBWS"/>
+      </attribute>
+      <attribute id="QINSPST" order="166" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="QINSPST"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="QINSPST"/>
+      </attribute>
+      <attribute id="URZEI" order="167" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="URZEI"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="URZEI"/>
+      </attribute>
+      <attribute id="MWSKZ" order="168" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MWSKZ"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="MWSKZ"/>
+      </attribute>
+      <attribute id="TXJCD" order="169" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TXJCD"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="TXJCD"/>
+      </attribute>
+      <attribute id="EMATN" order="170" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="EMATN"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="EMATN"/>
+      </attribute>
+      <attribute id="J_1AGIRUPD" order="171" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="J_1AGIRUPD"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="J_1AGIRUPD"/>
+      </attribute>
+      <attribute id="VKMWS" order="172" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VKMWS"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="VKMWS"/>
+      </attribute>
+      <attribute id="HSDAT" order="173" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="HSDAT"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="HSDAT"/>
+      </attribute>
+      <attribute id="BERKZ" order="174" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BERKZ"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="BERKZ"/>
+      </attribute>
+      <attribute id="MAT_KDAUF" order="175" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAT_KDAUF"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="MAT_KDAUF"/>
+      </attribute>
+      <attribute id="MAT_KDPOS" order="176" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAT_KDPOS"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="MAT_KDPOS"/>
+      </attribute>
+      <attribute id="MAT_PSPNR" order="177" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MAT_PSPNR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="MAT_PSPNR"/>
+      </attribute>
+      <attribute id="XWOFF" order="178" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XWOFF"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="XWOFF"/>
+      </attribute>
+      <attribute id="BEMOT" order="179" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BEMOT"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="BEMOT"/>
+      </attribute>
+      <attribute id="PRZNR" order="180" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="PRZNR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="PRZNR"/>
+      </attribute>
+      <attribute id="LLIEF" order="181" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LLIEF"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="LLIEF"/>
+      </attribute>
+      <attribute id="LSTAR" order="182" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="LSTAR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="LSTAR"/>
+      </attribute>
+      <attribute id="XOBEW" order="183" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XOBEW"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="XOBEW"/>
+      </attribute>
+      <attribute id="GRANT_NBR" order="184" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="GRANT_NBR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="GRANT_NBR"/>
+      </attribute>
+      <attribute id="ZUSTD_T156M" order="185" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ZUSTD_T156M"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="ZUSTD_T156M"/>
+      </attribute>
+      <attribute id="SPE_GTS_STOCK_TY" order="186" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SPE_GTS_STOCK_TY"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="SPE_GTS_STOCK_TY"/>
+      </attribute>
+      <attribute id="KBLNR" order="187" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KBLNR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="KBLNR"/>
+      </attribute>
+      <attribute id="KBLPOS" order="188" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="KBLPOS"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="KBLPOS"/>
+      </attribute>
+      <attribute id="XMACC" order="189" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XMACC"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="XMACC"/>
+      </attribute>
+      <attribute id="VGART_MKPF" order="190" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VGART_MKPF"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="VGART_MKPF"/>
+      </attribute>
+      <attribute id="BUDAT_MKPF" order="191" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="BUDAT_MKPF"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="BUDAT_MKPF"/>
+      </attribute>
+      <attribute id="CPUDT_MKPF" order="192" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CPUDT_MKPF"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="CPUDT_MKPF"/>
+      </attribute>
+      <attribute id="CPUTM_MKPF" order="193" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CPUTM_MKPF"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="CPUTM_MKPF"/>
+      </attribute>
+      <attribute id="USNAM_MKPF" order="194" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="USNAM_MKPF"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="USNAM_MKPF"/>
+      </attribute>
+      <attribute id="XBLNR_MKPF" order="195" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="XBLNR_MKPF"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="XBLNR_MKPF"/>
+      </attribute>
+      <attribute id="TCODE2_MKPF" order="196" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="TCODE2_MKPF"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="TCODE2_MKPF"/>
+      </attribute>
+      <attribute id="VBELN_IM" order="197" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELN_IM"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="VBELN_IM"/>
+      </attribute>
+      <attribute id="VBELP_IM" order="198" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="VBELP_IM"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="VBELP_IM"/>
+      </attribute>
+      <attribute id="SGT_SCAT" order="199" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGT_SCAT"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="SGT_SCAT"/>
+      </attribute>
+      <attribute id="SGT_UMSCAT" order="200" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGT_UMSCAT"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="SGT_UMSCAT"/>
+      </attribute>
+      <attribute id="SGT_RCAT" order="201" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGT_RCAT"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="SGT_RCAT"/>
+      </attribute>
+      <attribute id="_BEV2_ED_KZ_VER" order="202" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_BEV2_ED_KZ_VER"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="_BEV2_ED_KZ_VER"/>
+      </attribute>
+      <attribute id="_BEV2_ED_USER" order="203" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_BEV2_ED_USER"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="_BEV2_ED_USER"/>
+      </attribute>
+      <attribute id="_BEV2_ED_AEDAT" order="204" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_BEV2_ED_AEDAT"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="_BEV2_ED_AEDAT"/>
+      </attribute>
+      <attribute id="_BEV2_ED_AETIM" order="205" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="_BEV2_ED_AETIM"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="_BEV2_ED_AETIM"/>
+      </attribute>
+      <attribute id="DISUB_OWNER" order="206" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="DISUB_OWNER"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="DISUB_OWNER"/>
+      </attribute>
+      <attribute id="FSH_SEASON_YEAR" order="207" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_SEASON_YEAR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="FSH_SEASON_YEAR"/>
+      </attribute>
+      <attribute id="FSH_SEASON" order="208" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_SEASON"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="FSH_SEASON"/>
+      </attribute>
+      <attribute id="FSH_COLLECTION" order="209" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_COLLECTION"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="FSH_COLLECTION"/>
+      </attribute>
+      <attribute id="FSH_THEME" order="210" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_THEME"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="FSH_THEME"/>
+      </attribute>
+      <attribute id="FSH_UMSEA_YR" order="211" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_UMSEA_YR"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="FSH_UMSEA_YR"/>
+      </attribute>
+      <attribute id="FSH_UMSEA" order="212" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_UMSEA"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="FSH_UMSEA"/>
+      </attribute>
+      <attribute id="FSH_UMCOLL" order="213" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_UMCOLL"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="FSH_UMCOLL"/>
+      </attribute>
+      <attribute id="FSH_UMTHEME" order="214" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FSH_UMTHEME"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="FSH_UMTHEME"/>
+      </attribute>
+      <attribute id="SGT_CHINT" order="215" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="SGT_CHINT"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="SGT_CHINT"/>
+      </attribute>
+      <attribute id="COMPL_MARK" order="216" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="COMPL_MARK"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="COMPL_MARK"/>
+      </attribute>
+      <attribute id="FZGLS_MARK" order="217" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="FZGLS_MARK"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="FZGLS_MARK"/>
+      </attribute>
+      <attribute id="ETANP_MARK" order="218" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="ETANP_MARK"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="ETANP_MARK"/>
+      </attribute>
+      <attribute id="POPUP_MARK" order="219" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="POPUP_MARK"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="POPUP_MARK"/>
+      </attribute>
+      <attribute id="OICONDCOD" order="220" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="OICONDCOD"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="OICONDCOD"/>
+      </attribute>
+      <attribute id="CONDI" order="221" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="CONDI"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="CONDI"/>
+      </attribute>
+      <attribute id="WRF_CHARSTC1" order="222" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WRF_CHARSTC1"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="WRF_CHARSTC1"/>
+      </attribute>
+      <attribute id="WRF_CHARSTC2" order="223" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WRF_CHARSTC2"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="WRF_CHARSTC2"/>
+      </attribute>
+      <attribute id="WRF_CHARSTC3" order="224" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="WRF_CHARSTC3"/>
+        <keyMapping columnObjectName="Projn_MAT_MOV" columnName="WRF_CHARSTC3"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="fx_transaction_count" order="1" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="fx_transaction_count"/>
+        <measureMapping columnObjectName="Projn_MAT_MOV" columnName="fx_transaction_count"/>
+      </measure>
+      <measure id="FRATH" order="225" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="FRATH"/>
+        <measureMapping columnObjectName="Projn_MAT_MOV" columnName="FRATH"/>
+      </measure>
+      <measure id="DMBTR" order="226" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="DMBTR"/>
+        <measureMapping columnObjectName="Projn_MAT_MOV" columnName="DMBTR"/>
+      </measure>
+      <measure id="BNBTR" order="227" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="BNBTR"/>
+        <measureMapping columnObjectName="Projn_MAT_MOV" columnName="BNBTR"/>
+      </measure>
+      <measure id="BUALT" order="228" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="BUALT"/>
+        <measureMapping columnObjectName="Projn_MAT_MOV" columnName="BUALT"/>
+      </measure>
+      <measure id="DMBUM" order="229" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="DMBUM"/>
+        <measureMapping columnObjectName="Projn_MAT_MOV" columnName="DMBUM"/>
+      </measure>
+      <measure id="MENGE" order="230" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="MENGE"/>
+        <measureMapping columnObjectName="Projn_MAT_MOV" columnName="MENGE"/>
+      </measure>
+      <measure id="ERFMG" order="231" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="ERFMG"/>
+        <measureMapping columnObjectName="Projn_MAT_MOV" columnName="ERFMG"/>
+      </measure>
+      <measure id="BPMNG" order="232" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="BPMNG"/>
+        <measureMapping columnObjectName="Projn_MAT_MOV" columnName="BPMNG"/>
+      </measure>
+      <measure id="PBAMG" order="233" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="PBAMG"/>
+        <measureMapping columnObjectName="Projn_MAT_MOV" columnName="PBAMG"/>
+      </measure>
+      <measure id="PALAN" order="234" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="PALAN"/>
+        <measureMapping columnObjectName="Projn_MAT_MOV" columnName="PALAN"/>
+      </measure>
+      <measure id="BSTMG" order="235" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="BSTMG"/>
+        <measureMapping columnObjectName="Projn_MAT_MOV" columnName="BSTMG"/>
+      </measure>
+      <measure id="EXBWR" order="236" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="EXBWR"/>
+        <measureMapping columnObjectName="Projn_MAT_MOV" columnName="EXBWR"/>
+      </measure>
+      <measure id="VKWRT" order="237" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="VKWRT"/>
+        <measureMapping columnObjectName="Projn_MAT_MOV" columnName="VKWRT"/>
+      </measure>
+      <measure id="EXVKW" order="238" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="EXVKW"/>
+        <measureMapping columnObjectName="Projn_MAT_MOV" columnName="EXVKW"/>
+      </measure>
+      <measure id="LBKUM" order="239" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="LBKUM"/>
+        <measureMapping columnObjectName="Projn_MAT_MOV" columnName="LBKUM"/>
+      </measure>
+      <measure id="SALK3" order="240" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="SALK3"/>
+        <measureMapping columnObjectName="Projn_MAT_MOV" columnName="SALK3"/>
+      </measure>
+      <measure id="VKWRA" order="241" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="VKWRA"/>
+        <measureMapping columnObjectName="Projn_MAT_MOV" columnName="VKWRA"/>
+      </measure>
+      <measure id="LSMNG" order="242" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="LSMNG"/>
+        <measureMapping columnObjectName="Projn_MAT_MOV" columnName="LSMNG"/>
+      </measure>
+      <measure id="J_1BEXBASE" order="243" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="J_1BEXBASE"/>
+        <measureMapping columnObjectName="Projn_MAT_MOV" columnName="J_1BEXBASE"/>
+      </measure>
+      <measure id="FSH_DEALLOC_QTY" order="244" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="FSH_DEALLOC_QTY"/>
+        <measureMapping columnObjectName="Projn_MAT_MOV" columnName="FSH_DEALLOC_QTY"/>
+      </measure>
+      <measure id="OINAVNW" order="245" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="OINAVNW"/>
+        <measureMapping columnObjectName="Projn_MAT_MOV" columnName="OINAVNW"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures>
+      <measure id="Transaction_Count" hidden="false" order="246" aggregationType="sum" engineAggregation="sum" measureType="simple" datatype="DOUBLE" expressionLanguage="COLUMN_ENGINE">
+        <descriptions defaultDescription="Transaction Count"/>
+        <formula>if(in(&quot;BWART&quot;,'311','312','411','412'),&quot;fx_transaction_count&quot;* 0.5,&quot;fx_transaction_count&quot; * 1)</formula>
+      </measure>
+    </calculatedMeasures>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="51" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projn_MAT_MOV" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="165"/>
+        <rectangleSize height="70" width="199"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>

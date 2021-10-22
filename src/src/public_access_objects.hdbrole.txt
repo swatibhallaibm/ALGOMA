@@ -1,0 +1,28 @@
+{
+    "role": {
+        "name": "algoma.mm.im::PublicAccessObjects",
+        "object_privileges": [
+            {
+                "name": "algoma.mm.im::ZHV_BV_MAT_MOV_01",
+                "type": "VIEW",
+                "privileges": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "algoma.mm.im::ZHV_IM_PHY_INV_MAT_01",
+                "type": "VIEW",
+                "privileges": [
+                    "SELECT"
+                ]
+            },
+            {
+                "name": "algoma.mm.im::ZHV_IM_STORE_DAILY_01",
+                "type": "VIEW",
+                "privileges": [
+                    "SELECT"
+                ]
+            }
+        ]
+    }
+}

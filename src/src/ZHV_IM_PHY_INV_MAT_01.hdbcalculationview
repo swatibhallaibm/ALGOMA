@@ -1,0 +1,1110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" schemaVersion="2.3" id="algoma.mm.im::ZHV_IM_PHY_INV_MAT_01" applyPrivilegeType="NONE" defaultClient="" defaultLanguage="$$language$$" hierarchiesSQLEnabled="false" dataCategory="CUBE" enforceSqlExecution="false" executionSemantic="UNDEFINED" outputViewType="Aggregation" xscCompatibilityMode="true">
+  <origin/>
+  <descriptions defaultDescription="ZMM_PHY_INV_MAT_01"/>
+  <metadata changedAt="2021-04-19 16:18:40.388"/>
+  <localVariables/>
+  <variableMappings/>
+  <informationModelLayout relativeWidthScenario="67"/>
+  <dataSources>
+    <DataSource id="MARC">
+      <resourceUri>algoma.mm.im::MARC</resourceUri>
+    </DataSource>
+    <DataSource id="MARA">
+      <resourceUri>algoma.mm.im::MARA</resourceUri>
+    </DataSource>
+    <DataSource id="MAKT">
+      <resourceUri>algoma.mm.im::MAKT</resourceUri>
+    </DataSource>
+    <DataSource id="ISEG">
+      <resourceUri>algoma.mm.im::ISEG</resourceUri>
+    </DataSource>
+    <DataSource id="MARD">
+      <resourceUri>algoma.mm.im::MARD</resourceUri>
+    </DataSource>
+    <DataSource id="MBEW">
+      <resourceUri>algoma.mm.im::MBEW</resourceUri>
+    </DataSource>
+    <DataSource id="IKPF">
+      <resourceUri>algoma.mm.im::IKPF</resourceUri>
+    </DataSource>
+  </dataSources>
+  <calculationViews>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1" filterExpressionLanguage="COLUMN_ENGINE">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="ABCIN"/>
+        <viewAttribute id="DISMM"/>
+        <viewAttribute id="DISPO"/>
+        <viewAttribute id="EKGRP"/>
+        <viewAttribute id="KZPRO"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="#MARC">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ABCIN" source="ABCIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISMM" source="DISMM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISPO" source="DISPO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EKGRP" source="EKGRP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KZPRO" source="KZPRO"/>
+      </input>
+      <filter>&quot;ABCIN&quot;='A' or &quot;ABCIN&quot;='B' or &quot;ABCIN&quot;='C'</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_2">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="MTART"/>
+        <viewAttribute id="MEINS"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="#MARA">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MTART" source="MTART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS" source="MEINS"/>
+      </input>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_3">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="MAKTX"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="#MAKT">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MAKTX" source="MAKTX"/>
+      </input>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinOrder="OUTSIDE_IN" joinType="inner">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="ABCIN"/>
+        <viewAttribute id="DISMM"/>
+        <viewAttribute id="DISPO"/>
+        <viewAttribute id="MANDT_1"/>
+        <viewAttribute id="MATNR_1"/>
+        <viewAttribute id="MTART"/>
+        <viewAttribute id="EKGRP"/>
+        <viewAttribute id="KZPRO"/>
+        <viewAttribute id="MEINS"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="#Projection_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ABCIN" source="ABCIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISMM" source="DISMM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISPO" source="DISPO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EKGRP" source="EKGRP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KZPRO" source="KZPRO"/>
+      </input>
+      <input node="#Projection_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT_1" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_1" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MTART" source="MTART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS" source="MEINS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="MATNR"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_4">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="IBLNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="USNAM"/>
+        <viewAttribute id="AEDAT"/>
+        <viewAttribute id="USNAZ"/>
+        <viewAttribute id="ZLDAT"/>
+        <viewAttribute id="USNAD"/>
+        <viewAttribute id="BUDAT"/>
+        <viewAttribute id="XZAEL"/>
+        <viewAttribute id="XDIFF"/>
+        <viewAttribute id="XNZAE"/>
+        <viewAttribute id="XLOEK"/>
+        <viewAttribute id="MENGE"/>
+        <viewAttribute id="MEINS"/>
+        <viewAttribute id="ERFMG"/>
+        <viewAttribute id="ERFME"/>
+        <viewAttribute id="ZEILI"/>
+        <viewAttribute id="WAERS"/>
+        <viewAttribute id="DMBTR"/>
+        <viewAttribute id="BUCHM"/>
+        <viewAttribute id="WRTBM"/>
+        <viewAttribute id="WRTZL"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="#ISEG">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="IBLNR" source="IBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USNAM" source="USNAM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AEDAT" source="AEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USNAZ" source="USNAZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZLDAT" source="ZLDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USNAD" source="USNAD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XZAEL" source="XZAEL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XDIFF" source="XDIFF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XNZAE" source="XNZAE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XLOEK" source="XLOEK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MENGE" source="MENGE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS" source="MEINS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERFMG" source="ERFMG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERFME" source="ERFME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZEILI" source="ZEILI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WAERS" source="WAERS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DMBTR" source="DMBTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUCHM" source="BUCHM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WRTBM" source="WRTBM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WRTZL" source="WRTZL"/>
+      </input>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_2" joinOrder="OUTSIDE_IN" joinType="inner">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="ABCIN"/>
+        <viewAttribute id="DISMM"/>
+        <viewAttribute id="DISPO"/>
+        <viewAttribute id="MTART"/>
+        <viewAttribute id="MANDT_1"/>
+        <viewAttribute id="MATNR_1"/>
+        <viewAttribute id="MAKTX"/>
+        <viewAttribute id="EKGRP"/>
+        <viewAttribute id="KZPRO"/>
+        <viewAttribute id="MEINS"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="#Join_1">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ABCIN" source="ABCIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISMM" source="DISMM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISPO" source="DISPO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MTART" source="MTART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EKGRP" source="EKGRP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KZPRO" source="KZPRO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS" source="MEINS"/>
+      </input>
+      <input node="#Projection_3">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT_1" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_1" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MAKTX" source="MAKTX"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="MATNR"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_6" filterExpressionLanguage="COLUMN_ENGINE">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="LGPBE"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="LGORT"/>
+        <viewAttribute id="LABST"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="#MARD">
+        <mapping xsi:type="Calculation:AttributeMapping" target="LGPBE" source="LGPBE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LGORT" source="LGORT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LABST" source="LABST"/>
+      </input>
+      <filter>&quot;LGORT&quot;='W102'</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_6" joinOrder="OUTSIDE_IN" joinType="inner">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="ABCIN"/>
+        <viewAttribute id="DISMM"/>
+        <viewAttribute id="DISPO"/>
+        <viewAttribute id="MTART"/>
+        <viewAttribute id="MANDT_1"/>
+        <viewAttribute id="MATNR_1"/>
+        <viewAttribute id="MAKTX"/>
+        <viewAttribute id="EKGRP"/>
+        <viewAttribute id="KZPRO"/>
+        <viewAttribute id="MEINS"/>
+        <viewAttribute id="LGPBE"/>
+        <viewAttribute id="MANDT_2"/>
+        <viewAttribute id="MATNR_2"/>
+        <viewAttribute id="WERKS_1"/>
+        <viewAttribute id="LGORT"/>
+        <viewAttribute id="LABST"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="#Join_2">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ABCIN" source="ABCIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISMM" source="DISMM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISPO" source="DISPO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MTART" source="MTART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT_1" source="MANDT_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_1" source="MATNR_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MAKTX" source="MAKTX"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EKGRP" source="EKGRP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KZPRO" source="KZPRO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS" source="MEINS"/>
+      </input>
+      <input node="#Projection_6">
+        <mapping xsi:type="Calculation:AttributeMapping" target="LGPBE" source="LGPBE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT_2" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_2" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_1" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LGORT" source="LGORT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LABST" source="LABST"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="MATNR"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="Projection_7" filterExpressionLanguage="COLUMN_ENGINE">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="SALK3"/>
+        <viewAttribute id="BWTAR"/>
+        <viewAttribute id="BKLAS"/>
+        <viewAttribute id="MATNR"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="#MBEW">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALK3" source="SALK3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BWTAR" source="BWTAR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BKLAS" source="BKLAS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+      </input>
+      <filter>&quot;BWTAR&quot;=''</filter>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_5" joinOrder="OUTSIDE_IN" joinType="inner">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="ABCIN"/>
+        <viewAttribute id="DISMM"/>
+        <viewAttribute id="DISPO"/>
+        <viewAttribute id="MTART"/>
+        <viewAttribute id="MANDT_1"/>
+        <viewAttribute id="MATNR_1"/>
+        <viewAttribute id="MAKTX"/>
+        <viewAttribute id="EKGRP"/>
+        <viewAttribute id="KZPRO"/>
+        <viewAttribute id="MEINS"/>
+        <viewAttribute id="LGPBE"/>
+        <viewAttribute id="MANDT_2"/>
+        <viewAttribute id="MATNR_2"/>
+        <viewAttribute id="WERKS_1"/>
+        <viewAttribute id="LGORT"/>
+        <viewAttribute id="LABST"/>
+        <viewAttribute id="MANDT_3"/>
+        <viewAttribute id="SALK3"/>
+        <viewAttribute id="BWTAR"/>
+        <viewAttribute id="BKLAS"/>
+        <viewAttribute id="MATNR_3"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="#Join_6">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ABCIN" source="ABCIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISMM" source="DISMM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISPO" source="DISPO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MTART" source="MTART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT_1" source="MANDT_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_1" source="MATNR_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MAKTX" source="MAKTX"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EKGRP" source="EKGRP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KZPRO" source="KZPRO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS" source="MEINS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LGPBE" source="LGPBE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT_2" source="MANDT_2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_2" source="MATNR_2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_1" source="WERKS_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LGORT" source="LGORT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LABST" source="LABST"/>
+      </input>
+      <input node="#Projection_7">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT_3" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALK3" source="SALK3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BWTAR" source="BWTAR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BKLAS" source="BKLAS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_3" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+      </input>
+      <joinAttribute name="MANDT"/>
+      <joinAttribute name="MATNR"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:ProjectionView" id="CopyOfProjection_5">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="IBLNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="BUDAT"/>
+        <viewAttribute id="MONAT"/>
+        <viewAttribute id="USNAM"/>
+        <viewAttribute id="ZSTAT"/>
+        <viewAttribute id="DSTAT"/>
+        <viewAttribute id="XBLNI"/>
+        <viewAttribute id="LSTAT"/>
+        <viewAttribute id="XBUFI"/>
+        <viewAttribute id="KEORD"/>
+        <viewAttribute id="ORDNG"/>
+        <viewAttribute id="INVNU"/>
+        <viewAttribute id="IBLTXT"/>
+        <viewAttribute id="INVART"/>
+        <viewAttribute id="WSTI_BSTAT"/>
+        <viewAttribute id="SPERR"/>
+        <viewAttribute id="ZLDAT"/>
+        <viewAttribute id="GIDAT"/>
+        <viewAttribute id="SOBKZ"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="VGART"/>
+        <viewAttribute id="BLDAT"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="#IKPF">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="IBLNR" source="IBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MONAT" source="MONAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USNAM" source="USNAM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZSTAT" source="ZSTAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DSTAT" source="DSTAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XBLNI" source="XBLNI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LSTAT" source="LSTAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XBUFI" source="XBUFI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KEORD" source="KEORD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORDNG" source="ORDNG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INVNU" source="INVNU"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="IBLTXT" source="IBLTXT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INVART" source="INVART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WSTI_BSTAT" source="WSTI_BSTAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SPERR" source="SPERR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZLDAT" source="ZLDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GIDAT" source="GIDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOBKZ" source="SOBKZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VGART" source="VGART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLDAT" source="BLDAT"/>
+      </input>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_7" joinOrder="OUTSIDE_IN" joinType="inner">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT_1"/>
+        <viewAttribute id="MANDT_2"/>
+        <viewAttribute id="IBLNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="MATNR_1"/>
+        <viewAttribute id="WERKS_1"/>
+        <viewAttribute id="USNAM"/>
+        <viewAttribute id="AEDAT"/>
+        <viewAttribute id="USNAZ"/>
+        <viewAttribute id="ZLDAT"/>
+        <viewAttribute id="USNAD"/>
+        <viewAttribute id="BUDAT"/>
+        <viewAttribute id="XZAEL"/>
+        <viewAttribute id="XDIFF"/>
+        <viewAttribute id="XNZAE"/>
+        <viewAttribute id="XLOEK"/>
+        <viewAttribute id="MENGE"/>
+        <viewAttribute id="MEINS"/>
+        <viewAttribute id="ERFMG"/>
+        <viewAttribute id="ERFME"/>
+        <viewAttribute id="ZEILI"/>
+        <viewAttribute id="WAERS"/>
+        <viewAttribute id="DMBTR"/>
+        <viewAttribute id="BUCHM"/>
+        <viewAttribute id="WRTBM"/>
+        <viewAttribute id="WRTZL"/>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="IBLNR_1"/>
+        <viewAttribute id="IBLNR_2"/>
+        <viewAttribute id="GJAHR_1"/>
+        <viewAttribute id="BUDAT_1"/>
+        <viewAttribute id="MONAT"/>
+        <viewAttribute id="USNAM_1"/>
+        <viewAttribute id="ZSTAT"/>
+        <viewAttribute id="DSTAT"/>
+        <viewAttribute id="XBLNI"/>
+        <viewAttribute id="LSTAT"/>
+        <viewAttribute id="XBUFI"/>
+        <viewAttribute id="KEORD"/>
+        <viewAttribute id="ORDNG"/>
+        <viewAttribute id="INVNU"/>
+        <viewAttribute id="IBLTXT"/>
+        <viewAttribute id="INVART"/>
+        <viewAttribute id="WSTI_BSTAT"/>
+        <viewAttribute id="SPERR"/>
+        <viewAttribute id="ZLDAT_1"/>
+        <viewAttribute id="GIDAT"/>
+        <viewAttribute id="SOBKZ"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="VGART"/>
+        <viewAttribute id="BLDAT"/>
+      </viewAttributes>
+      <calculatedViewAttributes/>
+      <input node="#Projection_4">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT_1" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT_2" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="IBLNR" source="IBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_1" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_1" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USNAM" source="USNAM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AEDAT" source="AEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USNAZ" source="USNAZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZLDAT" source="ZLDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USNAD" source="USNAD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XZAEL" source="XZAEL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XDIFF" source="XDIFF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XNZAE" source="XNZAE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XLOEK" source="XLOEK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MENGE" source="MENGE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS" source="MEINS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERFMG" source="ERFMG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERFME" source="ERFME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZEILI" source="ZEILI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WAERS" source="WAERS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DMBTR" source="DMBTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUCHM" source="BUCHM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WRTBM" source="WRTBM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WRTZL" source="WRTZL"/>
+      </input>
+      <input node="#CopyOfProjection_5">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="IBLNR_1" source="IBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="IBLNR_2" source="IBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR_1" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT_1" source="BUDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MONAT" source="MONAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USNAM_1" source="USNAM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZSTAT" source="ZSTAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DSTAT" source="DSTAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XBLNI" source="XBLNI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LSTAT" source="LSTAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XBUFI" source="XBUFI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KEORD" source="KEORD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORDNG" source="ORDNG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INVNU" source="INVNU"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="IBLTXT" source="IBLTXT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INVART" source="INVART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WSTI_BSTAT" source="WSTI_BSTAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SPERR" source="SPERR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZLDAT_1" source="ZLDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GIDAT" source="GIDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOBKZ" source="SOBKZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VGART" source="VGART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLDAT" source="BLDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT_1" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="IBLNR" source="IBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
+      </input>
+      <joinAttribute name="MANDT_1"/>
+      <joinAttribute name="IBLNR"/>
+      <joinAttribute name="GJAHR"/>
+    </calculationView>
+    <calculationView xsi:type="Calculation:JoinView" id="Join_3" joinOrder="OUTSIDE_IN" joinType="rightOuter">
+      <descriptions/>
+      <viewAttributes>
+        <viewAttribute id="MANDT"/>
+        <viewAttribute id="MATNR"/>
+        <viewAttribute id="WERKS"/>
+        <viewAttribute id="ABCIN"/>
+        <viewAttribute id="DISMM"/>
+        <viewAttribute id="DISPO"/>
+        <viewAttribute id="MTART"/>
+        <viewAttribute id="MAKTX"/>
+        <viewAttribute id="EKGRP"/>
+        <viewAttribute id="KZPRO"/>
+        <viewAttribute id="MEINS_1"/>
+        <viewAttribute id="LGPBE"/>
+        <viewAttribute id="LGORT_1"/>
+        <viewAttribute id="LABST"/>
+        <viewAttribute id="SALK3"/>
+        <viewAttribute id="BWTAR"/>
+        <viewAttribute id="BKLAS"/>
+        <viewAttribute id="MANDT_1"/>
+        <viewAttribute id="MANDT_2"/>
+        <viewAttribute id="IBLNR"/>
+        <viewAttribute id="GJAHR"/>
+        <viewAttribute id="MATNR_1"/>
+        <viewAttribute id="WERKS_1"/>
+        <viewAttribute id="USNAM"/>
+        <viewAttribute id="AEDAT"/>
+        <viewAttribute id="USNAZ"/>
+        <viewAttribute id="ZLDAT"/>
+        <viewAttribute id="USNAD"/>
+        <viewAttribute id="BUDAT"/>
+        <viewAttribute id="XZAEL"/>
+        <viewAttribute id="XDIFF"/>
+        <viewAttribute id="XNZAE"/>
+        <viewAttribute id="XLOEK"/>
+        <viewAttribute id="MENGE"/>
+        <viewAttribute id="MEINS"/>
+        <viewAttribute id="ERFMG"/>
+        <viewAttribute id="ERFME"/>
+        <viewAttribute id="ZEILI"/>
+        <viewAttribute id="WAERS"/>
+        <viewAttribute id="DMBTR"/>
+        <viewAttribute id="BUCHM"/>
+        <viewAttribute id="WRTBM"/>
+        <viewAttribute id="WRTZL"/>
+        <viewAttribute id="MANDT_3"/>
+        <viewAttribute id="IBLNR_1"/>
+        <viewAttribute id="IBLNR_2"/>
+        <viewAttribute id="GJAHR_1"/>
+        <viewAttribute id="BUDAT_1"/>
+        <viewAttribute id="MONAT"/>
+        <viewAttribute id="USNAM_1"/>
+        <viewAttribute id="ZSTAT"/>
+        <viewAttribute id="DSTAT"/>
+        <viewAttribute id="XBLNI"/>
+        <viewAttribute id="LSTAT"/>
+        <viewAttribute id="XBUFI"/>
+        <viewAttribute id="KEORD"/>
+        <viewAttribute id="ORDNG"/>
+        <viewAttribute id="INVNU"/>
+        <viewAttribute id="IBLTXT"/>
+        <viewAttribute id="INVART"/>
+        <viewAttribute id="WSTI_BSTAT"/>
+        <viewAttribute id="SPERR"/>
+        <viewAttribute id="ZLDAT_1"/>
+        <viewAttribute id="GIDAT"/>
+        <viewAttribute id="SOBKZ"/>
+        <viewAttribute id="WERKS_2"/>
+        <viewAttribute id="VGART"/>
+        <viewAttribute id="BLDAT"/>
+      </viewAttributes>
+      <calculatedViewAttributes>
+        <calculatedViewAttribute datatype="INTEGER" id="Fiscal_Year_Check" expressionLanguage="COLUMN_ENGINE">
+          <formula>if ( &quot;ABCIN&quot; ='A'and (component(now(),1)-int(&quot;GJAHR&quot;))&lt;1, 1, &#xD;
+if ( &quot;ABCIN&quot; ='B'and (component(now(),1)-int(&quot;GJAHR&quot;))&lt;2, 1,&#xD;
+if ( &quot;ABCIN&quot; ='C'and (component(now(),1)-int(&quot;GJAHR&quot;))&lt;5, 1, 0)))</formula>
+        </calculatedViewAttribute>
+        <calculatedViewAttribute datatype="INTEGER" id="Check_calc" expressionLanguage="COLUMN_ENGINE">
+          <formula>component(now(),1)-int(&quot;GJAHR&quot;)</formula>
+        </calculatedViewAttribute>
+      </calculatedViewAttributes>
+      <input node="#Join_7">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT_1" source="MANDT_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT_2" source="MANDT_2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="IBLNR" source="IBLNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR" source="GJAHR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_1" source="MATNR_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_1" source="WERKS_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USNAM" source="USNAM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="AEDAT" source="AEDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USNAZ" source="USNAZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZLDAT" source="ZLDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USNAD" source="USNAD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT" source="BUDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XZAEL" source="XZAEL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XDIFF" source="XDIFF"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XNZAE" source="XNZAE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XLOEK" source="XLOEK"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MENGE" source="MENGE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS" source="MEINS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERFMG" source="ERFMG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ERFME" source="ERFME"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZEILI" source="ZEILI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WAERS" source="WAERS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DMBTR" source="DMBTR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUCHM" source="BUCHM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WRTBM" source="WRTBM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WRTZL" source="WRTZL"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT_3" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="IBLNR_1" source="IBLNR_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="IBLNR_2" source="IBLNR_2"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GJAHR_1" source="GJAHR_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BUDAT_1" source="BUDAT_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MONAT" source="MONAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="USNAM_1" source="USNAM_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZSTAT" source="ZSTAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DSTAT" source="DSTAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XBLNI" source="XBLNI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LSTAT" source="LSTAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="XBUFI" source="XBUFI"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KEORD" source="KEORD"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ORDNG" source="ORDNG"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INVNU" source="INVNU"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="IBLTXT" source="IBLTXT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="INVART" source="INVART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WSTI_BSTAT" source="WSTI_BSTAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SPERR" source="SPERR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ZLDAT_1" source="ZLDAT_1"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="GIDAT" source="GIDAT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SOBKZ" source="SOBKZ"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS_2" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="VGART" source="VGART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BLDAT" source="BLDAT"/>
+      </input>
+      <input node="#Join_5">
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="WERKS" source="WERKS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="ABCIN" source="ABCIN"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISMM" source="DISMM"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="DISPO" source="DISPO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MTART" source="MTART"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MAKTX" source="MAKTX"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="EKGRP" source="EKGRP"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="KZPRO" source="KZPRO"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MEINS_1" source="MEINS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LGPBE" source="LGPBE"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LGORT_1" source="LGORT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="LABST" source="LABST"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="SALK3" source="SALK3"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BWTAR" source="BWTAR"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="BKLAS" source="BKLAS"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MANDT_1" source="MANDT"/>
+        <mapping xsi:type="Calculation:AttributeMapping" target="MATNR_1" source="MATNR"/>
+      </input>
+      <joinAttribute name="MANDT_1"/>
+      <joinAttribute name="MATNR_1"/>
+    </calculationView>
+  </calculationViews>
+  <logicalModel id="Join_3">
+    <descriptions/>
+    <attributes>
+      <attribute id="IBLNR" order="1" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Physical Inventory Document"/>
+        <keyMapping columnObjectName="Join_3" columnName="IBLNR"/>
+      </attribute>
+      <attribute id="GJAHR" order="2" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Fiscal Year"/>
+        <keyMapping columnObjectName="Join_3" columnName="GJAHR"/>
+      </attribute>
+      <attribute id="USNAM" order="3" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Changed by"/>
+        <keyMapping columnObjectName="Join_3" columnName="USNAM"/>
+      </attribute>
+      <attribute id="AEDAT" order="4" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date of Last Change"/>
+        <keyMapping columnObjectName="Join_3" columnName="AEDAT"/>
+      </attribute>
+      <attribute id="USNAZ" order="5" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Counted By"/>
+        <keyMapping columnObjectName="Join_3" columnName="USNAZ"/>
+      </attribute>
+      <attribute id="ZLDAT" order="6" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date of last count"/>
+        <keyMapping columnObjectName="Join_3" columnName="ZLDAT"/>
+      </attribute>
+      <attribute id="USNAD" order="7" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Adjustment posting made by"/>
+        <keyMapping columnObjectName="Join_3" columnName="USNAD"/>
+      </attribute>
+      <attribute id="BUDAT" order="8" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Posting Date in the Document"/>
+        <keyMapping columnObjectName="Join_3" columnName="BUDAT"/>
+      </attribute>
+      <attribute id="XZAEL" order="9" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item has been counted"/>
+        <keyMapping columnObjectName="Join_3" columnName="XZAEL"/>
+      </attribute>
+      <attribute id="XDIFF" order="10" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Difference posted"/>
+        <keyMapping columnObjectName="Join_3" columnName="XDIFF"/>
+      </attribute>
+      <attribute id="XNZAE" order="11" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item will be recounted"/>
+        <keyMapping columnObjectName="Join_3" columnName="XNZAE"/>
+      </attribute>
+      <attribute id="XLOEK" order="12" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item is Deleted (Physical Inventory)"/>
+        <keyMapping columnObjectName="Join_3" columnName="XLOEK"/>
+      </attribute>
+      <attribute id="MEINS" order="14" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Base Unit of Measure"/>
+        <keyMapping columnObjectName="Join_3" columnName="MEINS"/>
+      </attribute>
+      <attribute id="ERFME" order="16" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Unit of entry (physical inventory)"/>
+        <keyMapping columnObjectName="Join_3" columnName="ERFME"/>
+      </attribute>
+      <attribute id="IBLNR_1" order="17" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Physical Inventory Document"/>
+        <keyMapping columnObjectName="Join_3" columnName="IBLNR"/>
+      </attribute>
+      <attribute id="GJAHR_1" order="18" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Fiscal Year"/>
+        <keyMapping columnObjectName="Join_3" columnName="GJAHR"/>
+      </attribute>
+      <attribute id="USNAM_1" order="19" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Changed by"/>
+        <keyMapping columnObjectName="Join_3" columnName="USNAM"/>
+      </attribute>
+      <attribute id="AEDAT_1" order="20" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date of Last Change"/>
+        <keyMapping columnObjectName="Join_3" columnName="AEDAT"/>
+      </attribute>
+      <attribute id="USNAZ_1" order="21" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Counted By"/>
+        <keyMapping columnObjectName="Join_3" columnName="USNAZ"/>
+      </attribute>
+      <attribute id="ZLDAT_1" order="22" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date of last count"/>
+        <keyMapping columnObjectName="Join_3" columnName="ZLDAT"/>
+      </attribute>
+      <attribute id="USNAD_1" order="23" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Adjustment posting made by"/>
+        <keyMapping columnObjectName="Join_3" columnName="USNAD"/>
+      </attribute>
+      <attribute id="BUDAT_1" order="24" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Posting Date in the Document"/>
+        <keyMapping columnObjectName="Join_3" columnName="BUDAT"/>
+      </attribute>
+      <attribute id="XZAEL_1" order="25" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item has been counted"/>
+        <keyMapping columnObjectName="Join_3" columnName="XZAEL"/>
+      </attribute>
+      <attribute id="XDIFF_1" order="26" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Difference posted"/>
+        <keyMapping columnObjectName="Join_3" columnName="XDIFF"/>
+      </attribute>
+      <attribute id="XNZAE_1" order="27" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item will be recounted"/>
+        <keyMapping columnObjectName="Join_3" columnName="XNZAE"/>
+      </attribute>
+      <attribute id="XLOEK_1" order="28" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item is Deleted (Physical Inventory)"/>
+        <keyMapping columnObjectName="Join_3" columnName="XLOEK"/>
+      </attribute>
+      <attribute id="MEINS_1" order="30" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Base Unit of Measure"/>
+        <keyMapping columnObjectName="Join_3" columnName="MEINS"/>
+      </attribute>
+      <attribute id="ERFME_1" order="32" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Unit of entry (physical inventory)"/>
+        <keyMapping columnObjectName="Join_3" columnName="ERFME"/>
+      </attribute>
+      <attribute id="ZEILI" order="33" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Line Number"/>
+        <keyMapping columnObjectName="Join_3" columnName="ZEILI"/>
+      </attribute>
+      <attribute id="WAERS" order="34" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Currency Key"/>
+        <keyMapping columnObjectName="Join_3" columnName="WAERS"/>
+      </attribute>
+      <attribute id="IBLNR_2" order="40" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Physical Inventory Document"/>
+        <keyMapping columnObjectName="Join_3" columnName="IBLNR"/>
+      </attribute>
+      <attribute id="GJAHR_2" order="41" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Fiscal Year"/>
+        <keyMapping columnObjectName="Join_3" columnName="GJAHR"/>
+      </attribute>
+      <attribute id="USNAM_2" order="42" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Changed by"/>
+        <keyMapping columnObjectName="Join_3" columnName="USNAM"/>
+      </attribute>
+      <attribute id="AEDAT_2" order="43" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date of Last Change"/>
+        <keyMapping columnObjectName="Join_3" columnName="AEDAT"/>
+      </attribute>
+      <attribute id="USNAZ_2" order="44" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Counted By"/>
+        <keyMapping columnObjectName="Join_3" columnName="USNAZ"/>
+      </attribute>
+      <attribute id="ZLDAT_2" order="45" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Date of last count"/>
+        <keyMapping columnObjectName="Join_3" columnName="ZLDAT"/>
+      </attribute>
+      <attribute id="USNAD_2" order="46" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Adjustment posting made by"/>
+        <keyMapping columnObjectName="Join_3" columnName="USNAD"/>
+      </attribute>
+      <attribute id="BUDAT_2" order="47" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Posting Date in the Document"/>
+        <keyMapping columnObjectName="Join_3" columnName="BUDAT"/>
+      </attribute>
+      <attribute id="XZAEL_2" order="48" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item has been counted"/>
+        <keyMapping columnObjectName="Join_3" columnName="XZAEL"/>
+      </attribute>
+      <attribute id="XDIFF_2" order="49" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Difference posted"/>
+        <keyMapping columnObjectName="Join_3" columnName="XDIFF"/>
+      </attribute>
+      <attribute id="XNZAE_2" order="50" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item will be recounted"/>
+        <keyMapping columnObjectName="Join_3" columnName="XNZAE"/>
+      </attribute>
+      <attribute id="XLOEK_2" order="51" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Item is Deleted (Physical Inventory)"/>
+        <keyMapping columnObjectName="Join_3" columnName="XLOEK"/>
+      </attribute>
+      <attribute id="MEINS_2" order="53" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Base Unit of Measure"/>
+        <keyMapping columnObjectName="Join_3" columnName="MEINS"/>
+      </attribute>
+      <attribute id="ERFME_2" order="55" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Unit of entry (physical inventory)"/>
+        <keyMapping columnObjectName="Join_3" columnName="ERFME"/>
+      </attribute>
+      <attribute id="ZEILI_1" order="56" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Line Number"/>
+        <keyMapping columnObjectName="Join_3" columnName="ZEILI"/>
+      </attribute>
+      <attribute id="WAERS_1" order="57" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Currency Key"/>
+        <keyMapping columnObjectName="Join_3" columnName="WAERS"/>
+      </attribute>
+      <attribute id="MANDT" order="64" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Client"/>
+        <keyMapping columnObjectName="Join_3" columnName="MANDT"/>
+      </attribute>
+      <attribute id="MATNR" order="65" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Number"/>
+        <keyMapping columnObjectName="Join_3" columnName="MATNR"/>
+      </attribute>
+      <attribute id="WERKS" order="66" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Plant"/>
+        <keyMapping columnObjectName="Join_3" columnName="WERKS"/>
+      </attribute>
+      <attribute id="ABCIN" order="67" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Physical inventory indicator for cycle counting"/>
+        <keyMapping columnObjectName="Join_3" columnName="ABCIN"/>
+      </attribute>
+      <attribute id="DISMM" order="68" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MRP Type"/>
+        <keyMapping columnObjectName="Join_3" columnName="DISMM"/>
+      </attribute>
+      <attribute id="DISPO" order="69" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="MRP Controller"/>
+        <keyMapping columnObjectName="Join_3" columnName="DISPO"/>
+      </attribute>
+      <attribute id="MTART" order="70" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Type"/>
+        <keyMapping columnObjectName="Join_3" columnName="MTART"/>
+      </attribute>
+      <attribute id="MAKTX" order="71" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Material Description"/>
+        <keyMapping columnObjectName="Join_3" columnName="MAKTX"/>
+      </attribute>
+      <attribute id="EKGRP" order="72" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Purchasing Group"/>
+        <keyMapping columnObjectName="Join_3" columnName="EKGRP"/>
+      </attribute>
+      <attribute id="KZPRO" order="73" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Indicator: withdrawal of stock from production bin"/>
+        <keyMapping columnObjectName="Join_3" columnName="KZPRO"/>
+      </attribute>
+      <attribute id="LGPBE" order="74" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Storage Bin"/>
+        <keyMapping columnObjectName="Join_3" columnName="LGPBE"/>
+      </attribute>
+      <attribute id="BWTAR" order="77" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Valuation Type"/>
+        <keyMapping columnObjectName="Join_3" columnName="BWTAR"/>
+      </attribute>
+      <attribute id="BKLAS" order="78" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Valuation Class"/>
+        <keyMapping columnObjectName="Join_3" columnName="BKLAS"/>
+      </attribute>
+      <attribute id="LGORT_1" order="79" attributeHierarchyActive="false" displayAttribute="false">
+        <descriptions defaultDescription="Storage Location"/>
+        <keyMapping columnObjectName="Join_3" columnName="LGORT_1"/>
+      </attribute>
+    </attributes>
+    <calculatedAttributes/>
+    <privateDataFoundation>
+      <tableProxies/>
+      <joins/>
+      <layout>
+        <shapes/>
+      </layout>
+    </privateDataFoundation>
+    <baseMeasures>
+      <measure id="MENGE" order="13" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Quantity"/>
+        <measureMapping columnObjectName="Join_3" columnName="MENGE"/>
+      </measure>
+      <measure id="ERFMG" order="15" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Quantity in unit of entry (physical inventory)"/>
+        <measureMapping columnObjectName="Join_3" columnName="ERFMG"/>
+      </measure>
+      <measure id="MENGE_1" order="29" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Quantity"/>
+        <measureMapping columnObjectName="Join_3" columnName="MENGE"/>
+      </measure>
+      <measure id="ERFMG_1" order="31" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Quantity in unit of entry (physical inventory)"/>
+        <measureMapping columnObjectName="Join_3" columnName="ERFMG"/>
+      </measure>
+      <measure id="DMBTR" order="35" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Difference amount in local currency"/>
+        <measureMapping columnObjectName="Join_3" columnName="DMBTR"/>
+      </measure>
+      <measure id="WRTBM" order="36" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Value of book quantity"/>
+        <measureMapping columnObjectName="Join_3" columnName="WRTBM"/>
+      </measure>
+      <measure id="BUCHM" order="37" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Book quantity immediately prior to count"/>
+        <measureMapping columnObjectName="Join_3" columnName="BUCHM"/>
+      </measure>
+      <measure id="WRTZL" order="38" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Value of physical inventory count"/>
+        <measureMapping columnObjectName="Join_3" columnName="WRTZL"/>
+      </measure>
+      <measure id="Fiscal_Year_Check" order="39" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Fiscal_Year_Check"/>
+        <measureMapping columnObjectName="Join_3" columnName="Fiscal_Year_Check"/>
+      </measure>
+      <measure id="MENGE_2" order="52" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Quantity"/>
+        <measureMapping columnObjectName="Join_3" columnName="MENGE"/>
+      </measure>
+      <measure id="ERFMG_2" order="54" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Quantity in unit of entry (physical inventory)"/>
+        <measureMapping columnObjectName="Join_3" columnName="ERFMG"/>
+      </measure>
+      <measure id="DMBTR_1" order="58" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Difference amount in local currency"/>
+        <measureMapping columnObjectName="Join_3" columnName="DMBTR"/>
+      </measure>
+      <measure id="WRTBM_1" order="59" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Value of book quantity"/>
+        <measureMapping columnObjectName="Join_3" columnName="WRTBM"/>
+      </measure>
+      <measure id="BUCHM_1" order="60" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Book quantity immediately prior to count"/>
+        <measureMapping columnObjectName="Join_3" columnName="BUCHM"/>
+      </measure>
+      <measure id="WRTZL_1" order="61" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Value of physical inventory count"/>
+        <measureMapping columnObjectName="Join_3" columnName="WRTZL"/>
+      </measure>
+      <measure id="Fiscal_Year_Check_1" order="62" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Fiscal_Year_Check"/>
+        <measureMapping columnObjectName="Join_3" columnName="Fiscal_Year_Check"/>
+      </measure>
+      <measure id="Fiscal_Year_Check_2" order="63" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Fiscal_Year_Check"/>
+        <measureMapping columnObjectName="Join_3" columnName="Fiscal_Year_Check"/>
+      </measure>
+      <measure id="LABST" order="75" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Valuated Unrestricted-Use Stock"/>
+        <measureMapping columnObjectName="Join_3" columnName="LABST"/>
+      </measure>
+      <measure id="SALK3" order="76" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Value of Total Valuated Stock"/>
+        <measureMapping columnObjectName="Join_3" columnName="SALK3"/>
+      </measure>
+      <measure id="Fiscal_Year_Check_3" order="80" aggregationType="sum" engineAggregation="sum" measureType="simple">
+        <descriptions defaultDescription="Fiscal_Year_Check"/>
+        <measureMapping columnObjectName="Join_3" columnName="Fiscal_Year_Check"/>
+      </measure>
+    </baseMeasures>
+    <calculatedMeasures/>
+    <restrictedMeasures/>
+    <localDimensions/>
+  </logicalModel>
+  <layout>
+    <shapes>
+      <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+        <upperLeftCorner x="327" y="87"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="22" y="743"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="176" y="743"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="253" y="647"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="99" y="647"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_4" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="404" y="455"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="175" y="551"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_6" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="329" y="551"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_6" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="250" y="455"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Projection_7" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="96" y="455"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_5" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="250" y="359"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="CopyOfProjection_5" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="558" y="455"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_7" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="404" y="359"/>
+        <rectangleSize height="0" width="0"/>
+      </shape>
+      <shape expanded="true" modelObjectName="Join_3" modelObjectNameSpace="CalculationView">
+        <upperLeftCorner x="327" y="263"/>
+        <rectangleSize height="-1" width="-1"/>
+      </shape>
+    </shapes>
+  </layout>
+</Calculation:scenario>
