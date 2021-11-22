@@ -1,0 +1,92 @@
+ZPLNGRP_ID;ZPLNGRP_DESC;ZDEPARTMENT;ZGEN_MANAGER
+800;TRNS E Auto Repair;Transportation Services;GM - Shipping, Transp & Prod Planning
+801;TRNS E Welfare;Transportation Services;GM - Shipping, Transp & Prod Planning
+802;TRNS E Yard Labor;Transportation Services;GM - Shipping, Transp & Prod Planning
+803;TRNS E Track Mtce;Transportation Services;GM - Shipping, Transp & Prod Planning
+804;TRNS E General;Transportation Services;GM - Shipping, Transp & Prod Planning
+805;TRNS E Mat Hdlg;Transportation Services;GM - Shipping, Transp & Prod Planning
+806;Masonry General;Masonry;GM - Engineering
+807;Masonry Cokemaking;Masonry;GM - Engineering
+808;Masonry Ironmaking;Masonry;GM - Engineering
+809;Masonry Steelmakng;Masonry;GM - Engineering
+810;Masonry Mat. Move;Masonry;GM - Engineering
+811;WCM General;Cold Mill;General Manager DSPC and Cold Mill
+812;WCM Pickler Mech;Cold Mill;General Manager DSPC and Cold Mill
+813;WCM RM/TM/ANL/SLIT;Cold Mill;General Manager DSPC and Cold Mill
+814;WCM Electrical;Cold Mill;General Manager DSPC and Cold Mill
+815;WCM Roll Shop;Cold Mill;General Manager DSPC and Cold Mill
+816;Central Trades Gen;Central Maintenance;GM - Central Maintenance
+817;CM Mob Mech Maint.;Central Maintenance;GM - Central Maintenance
+818;CM Carp/Glazier;Central Maintenance;GM - Central Maintenance
+819;CM Erect/Weld;Central Maintenance;GM - Central Maintenance
+820;CM Crane Repair;Central Maintenance;GM - Central Maintenance
+821;CM P&S Linemen;Power & Service;GM - Central Maintenance
+822;CM Power & Service;Power & Service;GM - Central Maintenance
+823;CM Electronic Repr;Power & Service;GM - Central Maintenance
+824;CM Elect Rep Shop;Power & Service;GM - Central Maintenance
+825;Mtce. Technology;Mtce. Technology;GM - Central Maintenance
+826;SMP 2Stlmkg Mech.;Steelmaking;GM - Steelmaking & Slabcaster
+827;SMP 2Stlmkg Elect.;Steelmaking;GM - Steelmaking & Slabcaster
+828;SMP 2Stlmkg Oper.;Steelmaking;GM - Steelmaking & Slabcaster
+829;SC Maintenance;Slabcaster;GM - Steelmaking & Slabcaster
+830;SC Operations;Slabcaster;GM - Steelmaking & Slabcaster
+831;DSPC TSC Elect;DSPC;General Manager DSPC and Cold Mill
+832;DSPC TSC Mech;DSPC;General Manager DSPC and Cold Mill
+833;DSPC TSC Oper;DSPC;General Manager DSPC and Cold Mill
+834;DSPC Roll Shop;DSPC;General Manager DSPC and Cold Mill
+835;DSPC General;DSPC;General Manager DSPC and Cold Mill
+836;DSPC Hot Mill Elec;DSPC;General Manager DSPC and Cold Mill
+837;DSPC Hot Mill Mech;DSPC;General Manager DSPC and Cold Mill
+838;DSPC Hot Mill Oper;DSPC;General Manager DSPC and Cold Mill
+839;COKE Service Elect;Cokemaking;GM - Cokemaking & Ironmaking
+840;COKE Battery Elect;Cokemaking;GM - Cokemaking & Ironmaking
+841;COKE 8/9 Bat Mech;Cokemaking;GM - Cokemaking & Ironmaking
+842;COKE 7Bat / Hdlg;Cokemaking;GM - Cokemaking & Ironmaking
+843;COKE BP&Coal Mech;Cokemaking;GM - Cokemaking & Ironmaking
+844;COKE Operations;Cokemaking;GM - Cokemaking & Ironmaking
+845;UTY Operations;Utilities;GM - Central Maintenance
+846;UTY HVAC;Utilities;GM - Central Maintenance
+847;UTY Mtce General;Utilities;GM - Central Maintenance
+848;UTY Mechanical;Utilities;GM - Central Maintenance
+849;UTY Insulators;Utilities;GM - Central Maintenance
+850;UTY Elect. Power;Utilities;GM - Central Maintenance
+851;P&S Mill General;Plate & Strip;General Manager Plate and Strip
+852;P&S Plate Fin Mech;Plate & Strip;General Manager Plate and Strip
+853;P&S Plate Fin Elec;Plate & Strip;General Manager Plate and Strip
+854;P&S SF&SY Mech;Plate & Strip;General Manager Plate and Strip
+855;P&S SF&SY Elect;Plate & Strip;General Manager Plate and Strip
+856;P&S 106 Mechanical;Plate & Strip;General Manager Plate and Strip
+857;P&S 106 Electrical;Plate & Strip;General Manager Plate and Strip
+858;P&S 106 Roll Shop;Plate & Strip;General Manager Plate and Strip
+859;P&S 166 Mechanical;Plate & Strip;General Manager Plate and Strip
+860;P&S 166 Electrical;Plate & Strip;General Manager Plate and Strip
+861;P&S 166 Roll Shop;Plate & Strip;General Manager Plate and Strip
+862;ENG General;Engineering;GM - Engineering
+863;CNST Mechanical;Construction;GM - Engineering
+864;CNST Electrical;Construction;GM - Engineering
+865;IRN Operations;Ironmaking;GM - Cokemaking & Ironmaking
+866;IRN 6BF Electrical;Ironmaking;GM - Cokemaking & Ironmaking
+867;IRN 6BF Mechanical;Ironmaking;GM - Cokemaking & Ironmaking
+868;IRN 6BF Operations;Ironmaking;GM - Cokemaking & Ironmaking
+869;IRN MH/Deslph Elec;Ironmaking;GM - Cokemaking & Ironmaking
+870;IRN MH/Deslph Mech;Ironmaking;GM - Cokemaking & Ironmaking
+871;IRN 7BF Electrical;Ironmaking;GM - Cokemaking & Ironmaking
+872;IRN 7BF Mechanical;Ironmaking;GM - Cokemaking & Ironmaking
+873;IRN 7BF Operations;Ironmaking;GM - Cokemaking & Ironmaking
+874;TRNS W Auto Repair;Transportation Services;GM - Shipping, Transp & Prod Planning
+875;TRNS W Mat Handlng;Material Reprocessing;GM - Shipping, Transp & Prod Planning
+876;TRNS W MRP General;Material Reprocessing;GM - Shipping, Transp & Prod Planning
+877;ADM & IT;IT;IT & Finance
+879;DSPC Bearing Shop;Plate & Strip;General Manager DSPC and Cold Mill
+880;Shops Planning;Shops;GM - Central Maintenance
+885;WB Plate Fin Mech;Welded beam;General Manager Plate and Strip
+886;WB Plate Fin Elect;Welded beam;General Manager Plate and Strip
+890;Cokemking Erector;Cokemaking;GM - Cokemaking & Ironmaking
+891;Plate Mill Erector;Plate & Strip;General Manager Plate and Strip
+892;Cold Mill Erectors;Cold Mill;General Manager DSPC and Cold Mill
+893;Steelmakng Erector;Steelmaking;GM - Steelmaking & Slabcaster
+894;DSPCErector&Welder;DSPC;General Manager DSPC and Cold Mill
+895;Ironmaking Erector;Ironmaking;GM - Cokemaking & Ironmaking
+896;Welders;Central Maintenance;GM - Central Maintenance
+897;Trans West Erector;Material Reprocessing;GM - Shipping, Transp & Prod Planning
+898;DieselShop Erector;Central Maintenance;GM - Shipping, Transp & Prod Planning
